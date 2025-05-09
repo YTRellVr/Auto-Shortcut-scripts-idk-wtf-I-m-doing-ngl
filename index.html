@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run C# on Click</title>
+</head>
+<body>
+    <p id="clickableText" style="cursor: pointer; color: blue; text-decoration: underline;">
+        Click me to run C# code!
+    </p>
+
+    <script>
+        document.getElementById("clickableText").addEventListener("click", function () {
+            fetch("https://your-backend-url/api/example/run-csharp")
+                .then(response => response.text())
+                .then(data => {
+                    alert(data); // Show the response from the server
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
