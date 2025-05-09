@@ -1,1 +1,3 @@
 dotnet add package InputSimulator --version 1.0.4
+
+dotnet run
