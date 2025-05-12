@@ -1,0 +1,23 @@
+// Include the HID library
+#include <Keyboard.h>
+
+void setup() {
+  // Start the Keyboard library
+  Keyboard.begin();
+
+  // (Your code to configure the keyboard shortcuts)
+}
+
+void loop() {
+  // This loop is optional, as the device will only run its pre-defined commands once when plugged in.
+  Keyboard.press(KEY_LEFT_GUI); // Windows Key
+  Keyboard.press(KEY_R); // "R" Key
+  Keyboard.release(); // Release both keys
+  delay(1000); // Wait 1 second
+  Keyboard.print("command.exe");
+  Keyboard.press(KEY_ENTER);
+  Keyboard.release();
+
+  delay(1000);
+  while(1); // Keep the loop running
+}
